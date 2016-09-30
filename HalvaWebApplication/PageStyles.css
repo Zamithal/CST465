@@ -1,0 +1,19 @@
+﻿p
+{ 
+    font-size:2em;
+    font-family:'Times New Roman';
+    background-color:aqua;
+    text-decoration:underline
+}
+
+#uxAuthorPhoto
+{
+    width:100%;
+    height:auto;
+}
+
+.strongAndEmphasized
+{
+    font-weight:bolder;
+    color:red;
+}

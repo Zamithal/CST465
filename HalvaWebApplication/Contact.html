@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="PageStyles.css" />
+</head>
+<body>
+    <fieldset class="strongAndEmphasized">
+        <legend>For More Information</legend>
+        <form id="uxMoreInformation" action="http://www.oit.edu" method="post" name="MoreInformationForm">
+            <label for="uxUserEmailBox" class="strongAndEmphasized">Email:</label>
+            <input type="text" id="uxUserEmailBox" name="UserEmail" />
+            <br />
+            <label for="uxAreaOfInterest" class="strongAndEmphasized">Area of interest:</label>
+            <textarea id="uxAreaOfInterest" name="UserInterest"></textarea>
+            <br />
+            <label for="uxUserType" class="strongAndEmphasized">User Type:</label>
+            <select id="uxUserType" name="UserType">
+                <option>Faculty</option>
+                <option>Student</option>
+                <option>Other</option>
+            </select>
+            <br /><button type="submit">Submit</button>
+            <input id="uxSubmitButton" type="submit" value="Submit Now" name="SubmitButton" />
+        </form>   
+    </fieldset>
+
+</body>
+</html>
