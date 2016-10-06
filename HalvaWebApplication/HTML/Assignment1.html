@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 1</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/DefaultStyles.css" />
+	<meta charset="utf-8" />
+</head>
+<body>
+    <nav>
+        <ul class="NavigationList">
+            <li>
+                <a href="https://msdn.microsoft.com/en-us/library/4w3ex9c2.aspx">ASP.NET Overview</a>
+            </li>
+            <li>
+                <a href="http://asp.net-tutorials.com/basics/hello-world/">Hello World! with ASP.NET</a>
+            </li>
+            <li>
+                <a href="https://support.microsoft.com/en-us/kb/303247">The concept of Code-Behind with ASP.NET</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Create Profile</h1>
+    </header>
+    <main>
+        <section>
+            <form action="http://www.oit.edu/cst465" method="post">
+                <div class="formElement">
+                    <label class="formLabel requiredFormLabel">Name</label>
+                    <input name="Name" id="uxName" type="text" />
+                </div>
+                <div class="formElement">
+                    <label class="formLabel requiredFormLabel">Email Address</label>
+                    <input name="EmailAddress" id="uxEmailAddress" type="text" />
+                </div>
+                <div class="formElement">
+                    <label class="formLabel requiredFormLabel">User Type</label>
+                    <select name="UserType" id="uxUserType">
+                        <option>Student</option>
+                        <option>Faculty/Staff</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <label class="formLabel">Hobby</label>
+                    <input name="Hobby" id="uxHobby" type="text" />
+                </div>
+                <div class="formElement">
+                    <label class="formLabel">Band</label>
+                    <input name="Band" id="uxBand" type="text" />
+                </div>
+                <div class="formElement">
+                    <label class="formLabel">Biography</label>
+                    <textarea name="Biography" id="uxBiography"></textarea>
+                </div>
+                <div class="formElement">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="requiredFormLabel">Course Prefix</th>
+                                <th class="requiredFormLabel">Course Number</th>
+                                <th class="requiredFormLabel">Course Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input name="CoursePrefix" id="uxCoursePrefix" type="text" />
+                                </td>
+                                <td>
+                                    <input name="CourseNumber" id="uxCourseNumber" type="text" />
+                                </td>
+                                <td>
+                                    <input name="CourseDescription" id="uxCourseDescription" type="text" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input name="Nickname" id="uxNickname" type="hidden"  value="Wuggles"/>
+                <div class="formElement">
+                    <button id="uxSubmit" type="submit">
+                        Save Profile
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <p>This is some text describing what will happen upon clicking submit.</p>
+        </section>
+    </main>
+    <footer>
+        <p>
+            I am a footer.
+        </p>
+    </footer>
+</body>
+</html>

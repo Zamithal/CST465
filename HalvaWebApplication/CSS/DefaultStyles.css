@@ -1,0 +1,63 @@
+﻿body
+{
+
+}
+
+nav
+{
+    width: 25%;
+    float: left;
+}
+
+nav a
+{
+    display:block;
+    margin-bottom:5px;
+}
+
+main
+{
+    width: 75%;
+    float: left;
+    min-width: 25rem;
+}
+
+.formElement
+{
+    margin: 5px;
+}
+
+.formLabel
+{
+    display: block;
+    width: 10rem;
+    text-align: right;
+    float: left;
+}
+
+.requiredFormLabel::after
+{
+    color: red;
+    content:"*";
+}
+
+h1
+{
+    font-size: 1.25rem;
+}
+
+th
+{
+    font-style:normal;
+    text-align:left;
+}
+
+ul
+{
+    list-style:none;
+}
+
+footer
+{
+    clear:left;
+}
