@@ -1,0 +1,51 @@
+﻿html
+{
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li
+{
+    border:solid;
+    background:linear-gradient(to bottom, #cdcdcd, #ffffff);
+    border-radius:5px;
+    padding:1.2rem;
+}
+footer
+{
+    clear:both;
+    background-color:black;
+    color:white;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width:100%;
+}
+
+main
+{
+    margin-bottom: 100px;
+}
+
+@media screen and (min-width: 800px)
+{
+    nav
+    {
+        width: 25%;
+        max-width: 300px;
+        float:left;
+    }
+    main
+    {
+        width:75%;
+        float:left;
+    }
+}

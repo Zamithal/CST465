@@ -104,6 +104,8 @@
   <ItemGroup>
     <Content Include="About.html" />
     <Content Include="CSS\DefaultStyles.css" />
+    <Content Include="CSS\Layout1.css" />
+    <Content Include="CSS\Layout2.css" />
     <Content Include="HTML\Assignment1.html" />
     <Content Include="Contact.html" />
     <Content Include="Global.asax" />
