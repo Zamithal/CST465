@@ -115,6 +115,7 @@
     <Content Include="WebForms\Contact.aspx" />
     <Content Include="WebForms\Default.aspx" />
     <Content Include="WebForms\ValidatedForm.aspx" />
+    <Content Include="WebForms\ValidatedFormOutput.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -157,6 +158,13 @@
     </Compile>
     <Compile Include="WebForms\ValidatedForm.aspx.designer.cs">
       <DependentUpon>ValidatedForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\ValidatedFormOutput.aspx.cs">
+      <DependentUpon>ValidatedFormOutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\ValidatedFormOutput.aspx.designer.cs">
+      <DependentUpon>ValidatedFormOutput.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -10,16 +10,16 @@
 namespace HalvaWebApplication.WebForms {
     
     
-    public partial class ValidatedForm {
+    public partial class ValidatedFormOutput {
         
         /// <summary>
-        /// uxPersonalInformation control.
+        /// uxValidDataArea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel uxPersonalInformation;
+        protected global::System.Web.UI.WebControls.PlaceHolder uxValidDataArea;
         
         /// <summary>
         /// uxName control.
@@ -28,7 +28,7 @@ namespace HalvaWebApplication.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HalvaWebApplication.WebForms.RequiredTextBox uxName;
+        protected global::System.Web.UI.WebControls.Literal uxName;
         
         /// <summary>
         /// uxFavoriteColor control.
@@ -37,7 +37,7 @@ namespace HalvaWebApplication.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HalvaWebApplication.WebForms.RequiredTextBox uxFavoriteColor;
+        protected global::System.Web.UI.WebControls.Literal uxFavoriteColor;
         
         /// <summary>
         /// uxCity control.
@@ -46,15 +46,15 @@ namespace HalvaWebApplication.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HalvaWebApplication.WebForms.RequiredTextBox uxCity;
+        protected global::System.Web.UI.WebControls.Literal uxCity;
         
         /// <summary>
-        /// uxSubmit control.
+        /// uxInvalidDataArea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button uxSubmit;
+        protected global::System.Web.UI.WebControls.PlaceHolder uxInvalidDataArea;
     }
 }

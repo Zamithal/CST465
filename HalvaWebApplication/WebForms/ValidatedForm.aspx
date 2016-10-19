@@ -8,6 +8,9 @@
 
 <asp:Content ContentPlaceHolderID="main" runat="server">
     <asp:Panel ID="uxPersonalInformation" runat="server">
-
+        <CST:RequiredTextBox ID="uxName" runat="server"/>
+        <CST:RequiredTextBox ID="uxFavoriteColor" runat="server" />
+        <CST:RequiredTextBox ID="uxCity" runat="server" />
+        <asp:Button ID="uxSubmit" Text="Submit" OnClick="uxSubmit_Click" runat="server"/>
     </asp:Panel>
 </asp:Content>

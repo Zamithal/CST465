@@ -14,27 +14,27 @@ namespace HalvaWebApplication.WebForms
 
 		}
 
-		protected string GetLabelText()
+		public string GetLabelText()
 		{
 			return uxFieldLabel.Text;
 		}
-		protected void SetLabelText(string LabelText)
+        public void SetLabelText(string LabelText)
 		{
 			uxFieldLabel.Text = LabelText;
 		}
-		protected string GetValue()
+        public string GetValue()
 		{
 			return uxTextBox.Text;
 		}
-		protected void SetValue(string Value)
+        public void SetValue(string Value)
 		{
 			uxTextBox.Text = Value;
 		}
-		protected string GetValidationGroup()
+        public string GetValidationGroup()
 		{
 			return uxValidator.ValidationGroup;
 		}
-		protected void SetValidationGroup(string ValidationGroup)
+        public void SetValidationGroup(string ValidationGroup)
 		{
 			uxValidator.ValidationGroup = ValidationGroup;
 		}
