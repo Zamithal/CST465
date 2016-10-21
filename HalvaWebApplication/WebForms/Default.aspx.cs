@@ -30,16 +30,16 @@ namespace HalvaWebApplication.WebForms
 			StringBuilder formOutputBuilder = new StringBuilder();
 
 			formOutputBuilder.Append("Name:");
-			formOutputBuilder.Append(uxName);
+			formOutputBuilder.Append(uxName.Text);
 			formOutputBuilder.Append("<br />");
 			formOutputBuilder.Append("Priority:");
-			formOutputBuilder.Append(uxPriority);
+			formOutputBuilder.Append(uxPriority.Text);
 			formOutputBuilder.Append("<br />");
 			formOutputBuilder.Append("Subject:");
-			formOutputBuilder.Append(uxSubject);
+			formOutputBuilder.Append(uxSubject.Text);
 			formOutputBuilder.Append("<br />");
 			formOutputBuilder.Append("Description:");
-			formOutputBuilder.Append(uxDescription);
+			formOutputBuilder.Append(uxDescription.Text);
 			formOutputBuilder.Append("<br />");
 
 			this.uxFormOutput.Text = formOutputBuilder.ToString();

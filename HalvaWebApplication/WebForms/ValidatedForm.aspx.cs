@@ -19,13 +19,13 @@ namespace HalvaWebApplication.WebForms
         {
             StringBuilder formOutputBuilder = new StringBuilder();
             formOutputBuilder.Append("?name=");
-            formOutputBuilder.Append(uxName.GetValue());
+            formOutputBuilder.Append(uxName.TextBoxValue);
             formOutputBuilder.Append("&favoritecolor=");
-            formOutputBuilder.Append(uxFavoriteColor.GetValue());
+            formOutputBuilder.Append(uxFavoriteColor.TextBoxValue);
             formOutputBuilder.Append("&city=");
-            formOutputBuilder.Append(uxCity.GetValue());
+            formOutputBuilder.Append(uxCity.TextBoxValue);
 
-            Response.Redirect("ValidatedFormOutput.aspx");
+            Response.Redirect("ValidatedFormOutput.aspx" + formOutputBuilder);
         }
     }
 }

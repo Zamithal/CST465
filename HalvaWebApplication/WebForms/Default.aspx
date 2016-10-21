@@ -4,9 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Default</title>
 </head>
 <body>
+    <h1>
+        Default Form
+    </h1>
     <form id="DefautForm" runat="server">
     <div>
         <asp:Label AssociatedControlID="uxName" runat="server">Name</asp:Label>

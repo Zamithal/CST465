@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @RenderSection("styles", false)
+</head>
+<body>
+    <div> 
+        <div id="uxWebsiteBannerDiv">
+            <img src="IDontHaveThisYet"/>
+        </div>
+        <header>
+            Halva
+            @RenderSection("navigation", false)
+        </header>
+        <h1>@ViewBag.PageH1</h1>
+        @RenderBody()
+        @RenderSection("footer", false)
+    </div>
+</body>
+</html>

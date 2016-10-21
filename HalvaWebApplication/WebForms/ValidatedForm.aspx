@@ -7,10 +7,11 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="main" runat="server">
+    <h1>Validation Form</h1>
     <asp:Panel ID="uxPersonalInformation" runat="server">
-        <CST:RequiredTextBox ID="uxName" runat="server"/>
-        <CST:RequiredTextBox ID="uxFavoriteColor" runat="server" />
-        <CST:RequiredTextBox ID="uxCity" runat="server" />
+        <CST:RequiredTextBox ID="uxName" LabelText="Name: " runat="server"/>
+        <CST:RequiredTextBox ID="uxFavoriteColor" LabelText="Favorite Color: " runat="server" />
+        <CST:RequiredTextBox ID="uxCity" LabelText ="City: " runat="server" />
         <asp:Button ID="uxSubmit" Text="Submit" OnClick="uxSubmit_Click" runat="server"/>
     </asp:Panel>
 </asp:Content>
