@@ -102,76 +102,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.html" />
     <Content Include="CSS\DefaultStyles.css" />
     <Content Include="CSS\Layout1.css" />
     <Content Include="CSS\Layout2.css" />
-    <Content Include="HTML\Assignment1.html" />
-    <Content Include="Contact.html" />
     <Content Include="Global.asax" />
-    <Content Include="HTML\Layout.html" />
     <Content Include="PageStyles.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebForms\Contact.aspx" />
-    <Content Include="WebForms\Default.aspx" />
-    <Content Include="WebForms\ValidatedForm.aspx" />
-    <Content Include="WebForms\ValidatedFormOutput.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Code\DataObjects\BlogPost.cs" />
+    <Compile Include="Code\Interfaces\IDataEntity.cs" />
+    <Compile Include="Code\Interfaces\IDataEntityRepository.cs" />
+    <Compile Include="Code\Repositories\BlogDBRepository.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Blog\BlogPostModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForms\Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForms\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForms\RequiredTextBox.ascx.cs">
-      <DependentUpon>RequiredTextBox.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\RequiredTextBox.ascx.designer.cs">
-      <DependentUpon>RequiredTextBox.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForms\ThisIsMyBeautfulMasterPageName.Master.cs">
-      <DependentUpon>ThisIsMyBeautfulMasterPageName.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\ThisIsMyBeautfulMasterPageName.Master.designer.cs">
-      <DependentUpon>ThisIsMyBeautfulMasterPageName.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForms\ValidatedForm.aspx.cs">
-      <DependentUpon>ValidatedForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\ValidatedForm.aspx.designer.cs">
-      <DependentUpon>ValidatedForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForms\ValidatedFormOutput.aspx.cs">
-      <DependentUpon>ValidatedFormOutput.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\ValidatedFormOutput.aspx.designer.cs">
-      <DependentUpon>ValidatedFormOutput.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -182,18 +138,17 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Error\ServerError.cshtml" />
+    <Content Include="Views\Blog\Add.cshtml" />
+    <Content Include="Views\Blog\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="WebForms\RequiredTextBox.ascx" />
-    <Content Include="WebForms\ThisIsMyBeautfulMasterPageName.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
