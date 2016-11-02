@@ -1,0 +1,35 @@
+﻿img
+{
+	width:100%;
+	height: 100%;
+}
+
+#uxBanner
+{
+	width: 66%;
+	height: 5%;
+	margin: auto;
+	padding: .25rem;
+	color: #493829;
+	background-color: #B99C6B;
+	font-family: Papyrus;
+	position:relative;
+}
+#uxLogo
+{
+	float:left;
+	margin: 10px 10px 10px 10px;
+	width: 100px;
+	height: 100px;
+}
+
+#uxBannerText
+{
+	float:left;
+}
+
+#uxSiteName
+{
+	font-size: 2.5rem;
+}
+

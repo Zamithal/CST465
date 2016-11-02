@@ -1,27 +1,34 @@
 ﻿
 @{
-    Layout = null;
+	Layout = null;
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    @RenderSection("styles", false)
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<link rel="stylesheet" type="text/css" href="~/CSS/HalvaDefaultStyle.css"/>
+	@RenderSection("styles", false)
 </head>
 <body>
-    <div> 
-        <div id="uxWebsiteBannerDiv">
-            <img src="IDontHaveThisYet"/>
-        </div>
-        <header>
-            Halva
-            @RenderSection("navigation", false)
-        </header>
-        @RenderBody()
-        @RenderSection("footer", false)
-    </div>
+	<div> 
+		<div id="uxBanner">
+            <div id="uxLogo">
+                <img src="~/Resources/WheatSheaf.svg" alt="Bundle of wheat"/>
+            </div>
+			<div id="uxBannerText">
+                <div id="uxSiteName">Halva</div>
+                <div id="uxSlogan">Be a gluten for punishment.</div>
+            </div>
+			
+		</div>
+		<header>
+			@RenderSection("navigation", false)
+		</header>
+		@RenderBody()
+		@RenderSection("footer", false)
+	</div>
 </body>
 </html>

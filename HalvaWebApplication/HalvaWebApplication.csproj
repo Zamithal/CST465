@@ -103,10 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\DefaultStyles.css" />
+    <Content Include="CSS\HalvaDefaultStyle.css" />
     <Content Include="CSS\Layout1.css" />
     <Content Include="CSS\Layout2.css" />
     <Content Include="Global.asax" />
     <Content Include="PageStyles.css" />
+    <Content Include="Resources\WheatSheaf.svg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
