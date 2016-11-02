@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-namespace HalvaWebApplication.Code.DataObjects;
+namespace HalvaWebApplication.Code.DataObjects
 {
 	public class BlogPost : Interfaces.IDataEntity
 	{

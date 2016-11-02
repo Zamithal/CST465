@@ -1,0 +1,17 @@
+﻿@model List<HalvaWebApplication.Code.DataObjects.BlogPost>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Some sort of list</h1>
+@foreach(HalvaWebApplication.Code.DataObjects.BlogPost blog in Model)
+{
+    <div>
+        <h2>@blog.Title</h2>
+        @Html.ActionLink("Edit Post", "Edit", new { ID = blog.ID })
+
+    </div>
+}
+@Html.ActionLink("Add Post", "Add")
+
+

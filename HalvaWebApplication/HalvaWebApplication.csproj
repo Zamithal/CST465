@@ -140,6 +140,7 @@
     <Content Include="Views\Error\ServerError.cshtml" />
     <Content Include="Views\Blog\Add.cshtml" />
     <Content Include="Views\Blog\Edit.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

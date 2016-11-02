@@ -1,8 +1,12 @@
-﻿
+﻿@model HalvaWebApplication.Models.BlogPostModel
 @{
-    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Edit an Existing Blog Post";
 }
+<h1>Edit a Blog Post</h1>
 
-<h1>Add a New Blog Post</h1>
-
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <button type="submit">Submit</button>
+}
