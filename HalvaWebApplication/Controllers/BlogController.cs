@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HalvaWebApplication.Code.Interfaces;
+using HalvaWebApplication.Code.DataObjects;
+using HalvaWebApplication.Code.Repositories;
 
 namespace HalvaWebApplication.Controllers
 {
     public class BlogController : Controller
     {
-		public BlogController()
+		public BlogController(IDataEntityRepository<BlogPost> dataInterface)
 		{
-			m_repository = new Code.Repositories.BlogDBRepository();
+			m_repository = dataInterface;
 		}
-
 
         // GET: Blog
         public ActionResult Index()
         {
-			List<Code.DataObjects.BlogPost> blogs = m_repository.GetList();
+			List<BlogPost> blogs = m_repository.GetList();
 			return View(blogs);
         }
 
@@ -33,7 +35,7 @@ namespace HalvaWebApplication.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				Code.DataObjects.BlogPost post = new Code.DataObjects.BlogPost();
+				BlogPost post = new BlogPost();
 				post.ID = model.ID;
 				post.Author = model.Author;
 				post.Title = model.Title;
@@ -48,7 +50,7 @@ namespace HalvaWebApplication.Controllers
 
 		public ActionResult Edit(int id)
 		{
-			Code.DataObjects.BlogPost blog = m_repository.Get(id);
+			BlogPost blog = m_repository.Get(id);
 			Models.BlogPostModel model = new Models.BlogPostModel();
 			{
 				model.ID = blog.ID;
@@ -65,7 +67,7 @@ namespace HalvaWebApplication.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				Code.DataObjects.BlogPost post = new Code.DataObjects.BlogPost();
+				BlogPost post = new BlogPost();
 				post.ID = model.ID;
 				post.Author = model.Author;
 				post.Title = model.Title;
@@ -73,11 +75,13 @@ namespace HalvaWebApplication.Controllers
 
 				m_repository.Save(post);
 			}
+			else
+				return View(model);
 
 			return RedirectToAction("Index");
 		}
 
-		private Code.Interfaces.IDataEntityRepository<Code.DataObjects.BlogPost> m_repository;
+		private IDataEntityRepository<BlogPost> m_repository;
 
     }
 }

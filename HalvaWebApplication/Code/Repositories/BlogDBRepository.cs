@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using HalvaWebApplication.Code.DataObjects;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
+using HalvaWebApplication.Code.DataObjects;
+using HalvaWebApplication.Code.Interfaces;
+
 namespace HalvaWebApplication.Code.Repositories
 {
-	public class BlogDBRepository : Interfaces.IDataEntityRepository<DataObjects.BlogPost>
+	public class BlogDBRepository : IDataEntityRepository<BlogPost>
 	{
 
 		public BlogPost Get(int id)

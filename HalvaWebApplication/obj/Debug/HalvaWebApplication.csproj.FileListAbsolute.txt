@@ -80,3 +80,13 @@ D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplicatio
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.csprojResolveAssemblyReference.cache
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.pdb
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Unity.Mvc5.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.pdb
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
