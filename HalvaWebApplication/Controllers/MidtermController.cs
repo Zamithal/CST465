@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
+using Newtonsoft.Json.Linq;
 
 using HalvaWebApplication.Models.TestQuestion;
 
@@ -16,6 +18,7 @@ namespace HalvaWebApplication.Controllers
 			return View(GetTestQuestions());
 		}
 
+		[ValidateAntiForgeryToken]
 		[HttpPost]
 		public ActionResult TakeTest(List<TestQuestion> Answers)
 		{
@@ -23,11 +26,14 @@ namespace HalvaWebApplication.Controllers
 
 			SortedDictionary<int, TestQuestion> questionAnswerMap = new SortedDictionary<int, TestQuestion>();
 
-			foreach(TestQuestion question in questions)
-				questionAnswerMap[question.ID].Question = question.Question;
-			foreach (TestQuestion answer in Answers)
+			foreach (TestQuestion question in questions)
+			{
+				questionAnswerMap[question.ID] = question;
+			}
+			foreach(TestQuestion answer in Answers)
+			{
 				questionAnswerMap[answer.ID].Answer = answer.Answer;
-
+			}
 			// Make into list.
 			List<TestQuestion> questionAnswerList = new List<TestQuestion>();
 
@@ -54,10 +60,55 @@ namespace HalvaWebApplication.Controllers
 
 		public List<TestQuestion> GetTestQuestions()
 		{
-			List<TestQuestion> questions = new
-				System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<List<TestQuestion>>("~/JSON/Midterm.json");
+			string fullPath = HttpContext.Server.MapPath(@"/JSON/Midterm.json");
+
+			string testContents = null;
+
+			using (StreamReader reader = new StreamReader(fullPath))
+			{
+				testContents = reader.ReadToEnd();
+				reader.Close();
+			}
+
+			if (testContents == null)
+			{
+				return new List<TestQuestion>();
+			}
+
+			JArray questionStrings = JArray.Parse(testContents);
+
+			List<TestQuestion> questions = new List<TestQuestion>();
+
+			foreach(JToken token in questionStrings)
+			{
+				TestQuestion newQuestion = null;
+
+				string type = token.Value<string>("type");
+
+				switch(type)
+				{
+					case "TrueFalseQuestion":
+						newQuestion = token.ToObject<TrueFalseQuestion>();
+						break;
+					case "ShortAnswerQuestion":
+						newQuestion = token.ToObject<ShortAnswerQuestion>();
+						break;
+					case "LongAnswerQuestion":
+						newQuestion = token.ToObject<LongAnswerQuestion>();
+						break;
+					case "MultipleChoiceQuestion":
+						newQuestion = token.ToObject<MultipleChoiceQuestion>();
+						break;
+					default:
+						throw new ArgumentException("Unknown question type");
+				}
+
+				questions.Add(newQuestion);
+			}
+
 
 			return questions;
+
 		}
 
     }

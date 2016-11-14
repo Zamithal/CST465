@@ -1,0 +1,17 @@
+﻿@model List<HalvaWebApplication.Models.TestQuestion.TestQuestion>
+@{
+    ViewBag.Title = "TestResults";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Test Results</h1>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+
+    for (int i = 0; i < Model.Count; i++)
+    {
+        @Html.DisplayFor(question => Model[i]);
+    }
+}
+

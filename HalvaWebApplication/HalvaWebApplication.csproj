@@ -173,6 +173,13 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="JSON\Midterm.json" />
     <Content Include="App_Data\Blogposts.json" />
+    <Content Include="Views\Midterm\TakeTest.cshtml" />
+    <Content Include="Views\Midterm\DisplayResults.cshtml" />
+    <Content Include="Views\Midterm\EditorTemplates\TrueFalseQuestion.cshtml" />
+    <Content Include="Views\Midterm\EditorTemplates\ShortAnswerQuestion.cshtml" />
+    <Content Include="Views\Midterm\EditorTemplates\LongAnswerQuestion.cshtml" />
+    <Content Include="Views\Midterm\EditorTemplates\MultipleChoiceQuestion.cshtml" />
+    <Content Include="Views\Midterm\EditorTemplates\TestQuestion.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -180,9 +187,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Midterm\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

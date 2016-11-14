@@ -1,0 +1,10 @@
+﻿@model HalvaWebApplication.Models.TestQuestion.ShortAnswerQuestion
+
+@{
+    <h2>@Model.Question</h2>
+    @Html.Hidden("Id", Model.ID);
+    @Html.TextBox("Answer");
+    @Html.ValidationMessage("Answer");
+
+}
+

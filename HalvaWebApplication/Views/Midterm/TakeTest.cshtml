@@ -1,0 +1,16 @@
+﻿@model List<HalvaWebApplication.Models.TestQuestion.TestQuestion>
+@{
+    ViewBag.Title = "TakeTest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Test</h1>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary();
+
+    @Html.EditorForModel();
+
+    <input type="submit" value="Submit"/>
+}

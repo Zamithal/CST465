@@ -1,0 +1,11 @@
+﻿@model HalvaWebApplication.Models.TestQuestion.TrueFalseQuestion
+
+@{
+    <h2>@Model.Question</h2>
+    List<SelectListItem> options = new List<SelectListItem>();
+    options.Add(new SelectListItem { Text = "True", Value = "True", Selected = true });
+    options.Add(new SelectListItem { Text = "False", Value = "False", Selected = false });
+    @Html.Hidden("Id", Model.ID);
+    @Html.DropDownList("Answer", options);
+    @Html.ValidationMessage("Answer");
+}

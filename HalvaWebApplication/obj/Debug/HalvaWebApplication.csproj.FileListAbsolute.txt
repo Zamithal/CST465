@@ -90,3 +90,13 @@ Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.
 Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.xml
 Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
 Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Unity.Mvc5.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml

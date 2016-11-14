@@ -1,0 +1,13 @@
+﻿@model HalvaWebApplication.Models.TestQuestion.MultipleChoiceQuestion
+
+@{
+    <h2>@Model.Question</h2>
+    @Html.Hidden("Id", Model.ID);
+    foreach (string choice in Model.Choices)
+    {
+        @Html.RadioButton("Answer", choice)
+        @Html.Label(choice);
+    }
+    @Html.ValidationMessage("Answer");
+}
+

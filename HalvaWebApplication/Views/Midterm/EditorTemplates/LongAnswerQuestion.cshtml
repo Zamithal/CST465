@@ -1,0 +1,9 @@
+﻿@model HalvaWebApplication.Models.TestQuestion.LongAnswerQuestion
+
+@{
+    <h2>@Model.Question</h2>
+    @Html.Hidden("Id", Model.ID);
+    @Html.TextArea("Answer");
+    @Html.ValidationMessage("Answer");
+
+}
