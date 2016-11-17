@@ -8,7 +8,6 @@ namespace HalvaWebApplication.Models
 	public class BlogPostModel
 	{
 		[HiddenInput(DisplayValue = false)]
-    
 		public int ID { get; set; }
 
 		[Required]

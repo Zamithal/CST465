@@ -23,6 +23,16 @@ namespace HalvaWebApplication.Controllers
 			return View(blogs);
         }
 
+		public ActionResult Show(int ID)
+		{
+			BlogPost post = m_repository.Get(ID);
+
+			if (post != null)
+				return View(post);
+			else
+				return View();
+		}
+
 		public ActionResult Add()
 		{
 			Models.BlogPostModel blog = new Models.BlogPostModel();
@@ -54,7 +64,7 @@ namespace HalvaWebApplication.Controllers
 			Models.BlogPostModel model = new Models.BlogPostModel();
 			{
 				model.ID = blog.ID;
-				model.Author = model.Author;
+				model.Author = blog.Author;
 				model.Title = blog.Title;
 				model.Content = blog.Content;
 			}

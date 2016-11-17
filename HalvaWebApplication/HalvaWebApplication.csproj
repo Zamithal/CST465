@@ -138,6 +138,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Code\DataObjects\BlogPost.cs" />
+    <Compile Include="Code\Extension Methods\BlogRepositoryExtensions.cs" />
     <Compile Include="Code\Interfaces\IDataEntity.cs" />
     <Compile Include="Code\Interfaces\IDataEntityRepository.cs" />
     <Compile Include="Code\Repositories\BlogDBRepository.cs" />
@@ -180,6 +181,8 @@
     <Content Include="Views\Midterm\EditorTemplates\LongAnswerQuestion.cshtml" />
     <Content Include="Views\Midterm\EditorTemplates\MultipleChoiceQuestion.cshtml" />
     <Content Include="Views\Midterm\EditorTemplates\TestQuestion.cshtml" />
+    <Content Include="Views\Blog\Show.cshtml" />
+    <Content Include="Views\Blog\DisplayTemplates\BlogPost.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

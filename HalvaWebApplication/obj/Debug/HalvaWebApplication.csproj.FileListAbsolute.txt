@@ -39,6 +39,16 @@ Z:\documents\CST465\HalvaWebApplication\bin\System.Web.Http.WebHost.xml
 Z:\documents\CST465\HalvaWebApplication\obj\Debug\HalvaWebApplication.csprojResolveAssemblyReference.cache
 Z:\documents\CST465\HalvaWebApplication\obj\Debug\HalvaWebApplication.dll
 Z:\documents\CST465\HalvaWebApplication\obj\Debug\HalvaWebApplication.pdb
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Unity.Mvc5.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.pdb
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\roslyn\csc.exe
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -55,6 +65,10 @@ D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplicatio
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\HalvaWebApplication.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\HalvaWebApplication.pdb
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Web.Infrastructure.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Newtonsoft.Json.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Net.Http.Formatting.dll
@@ -66,7 +80,13 @@ D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplicatio
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Webpages.Deployment.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Webpages.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Webpages.Razor.dll
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Unity.Mvc5.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Razor.xml
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Webpages.xml
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Webpages.Deployment.xml
@@ -77,26 +97,6 @@ D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplicatio
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Net.Http.Formatting.xml
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Http.xml
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\System.Web.Http.WebHost.xml
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.csprojResolveAssemblyReference.cache
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.pdb
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.dll
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.dll
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
-Z:\documents\CST465\HalvaWebApplication\bin\Unity.Mvc5.dll
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.pdb
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.xml
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.xml
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
-Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.dll
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.dll
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Unity.Mvc5.dll
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.pdb
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.ServiceLocation.xml
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.xml
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
-D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.csprojResolveAssemblyReference.cache
