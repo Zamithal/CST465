@@ -1,0 +1,10 @@
+﻿@model IEnumerable<HalvaWebApplication.Code.DataObjects.BlogPost>
+
+@foreach(HalvaWebApplication.Code.DataObjects.BlogPost post in Model)
+{
+    <div class="uxBlogPostSummary">
+        @Html.ActionLink(post.Title, "Show", post);
+        <time>@post.Timestamp</time>
+        @Html.ActionLink("Edit", "Edit", post)
+    </div>
+}

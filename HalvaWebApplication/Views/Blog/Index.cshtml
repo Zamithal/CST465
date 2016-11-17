@@ -4,14 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h1>Blog Posts</h1>
-@foreach(HalvaWebApplication.Code.DataObjects.BlogPost blog in Model)
-{
-    <div>
-        <h2>@blog.Title</h2>
-        @Html.ActionLink("Edit Post", "Edit", new { ID = blog.ID })
-        @Html.ActionLink("View Blog", "Show", new { ID = blog.ID })
-    </div>
-}
+@Html.Partial("_BlogPostLinkList")
 @Html.ActionLink("Add Post", "Add")
+
+@using (Html.BeginForm())
+{
+    @Html.TextBox("Filter")
+    <input type="submit" value="Filter"/>
+}
 
 

@@ -1,0 +1,24 @@
+﻿@model HalvaWebApplication.Models.BlogPostModel
+
+
+<div class="uxBlogEditor">
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(m => m.Title, "Title")
+        @Html.TextBoxFor(m => m.Title)
+        @Html.ValidationMessageFor(m => m.Title, "Title is required.")
+        <br/>
+
+        @Html.LabelFor(m => m.Author, "Author")
+        @Html.TextBoxFor(m => m.Author)
+        @Html.ValidationMessageFor(m => m.Author, "Author is required.")
+        <br />
+
+        @Html.LabelFor(m => m.Content, "Content")
+        @Html.TextAreaFor(m => m.Content)
+        @Html.ValidationMessageFor(m => m.Content, "Content is required.")
+        <br />
+
+        <input type="submit" value="Submit"/>
+    }
+</div>

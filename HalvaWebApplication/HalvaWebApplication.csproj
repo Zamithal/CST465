@@ -183,6 +183,8 @@
     <Content Include="Views\Midterm\EditorTemplates\TestQuestion.cshtml" />
     <Content Include="Views\Blog\Show.cshtml" />
     <Content Include="Views\Blog\DisplayTemplates\BlogPost.cshtml" />
+    <Content Include="Views\Blog\EditorTemplates\BlogPostModel.cshtml" />
+    <Content Include="Views\Shared\_BlogPostLinkList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

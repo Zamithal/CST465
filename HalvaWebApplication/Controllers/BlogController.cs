@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using HalvaWebApplication.Code.Interfaces;
 using HalvaWebApplication.Code.DataObjects;
 using HalvaWebApplication.Code.Repositories;
+using HalvaWebApplication.Code.Extension_Methods;
 
 namespace HalvaWebApplication.Controllers
 {
@@ -16,12 +17,18 @@ namespace HalvaWebApplication.Controllers
 			m_repository = dataInterface;
 		}
 
-        // GET: Blog
         public ActionResult Index()
         {
 			List<BlogPost> blogs = m_repository.GetList();
 			return View(blogs);
         }
+
+		[HttpPost]
+		public ActionResult Index(string Filter)
+		{
+			List<BlogPost> blogs = m_repository.GetListByContent(Filter);
+			return View(blogs);
+		}
 
 		public ActionResult Show(int ID)
 		{
