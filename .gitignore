@@ -2,3 +2,5 @@
 /packages/
 /HalvaWebApplication/ConnectionStrings.config
 /HalvaWebApplication/Smtp.config
+/HalvaWebApplication/bin/
+/HalvaWebApplication/obj/

@@ -13,6 +13,7 @@ namespace HalvaWebApplication.Code.Extension_Methods
 		public static List<BlogPost> GetListByContent(this IDataEntityRepository<BlogPost> Blogs, string SearchString)
 		{
 			List<BlogPost> contains = new List<BlogPost>();
+			contains = Blogs.GetList().Where(post => post.Title.Contains(SearchString) || post.Content.Contains(SearchString)).ToList();
 
 			foreach (BlogPost blog in Blogs.GetList())
 			{
