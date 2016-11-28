@@ -6,6 +6,7 @@ namespace HalvaWebApplication.Code.Interfaces
 	{
 		T Get(int id);
 		void Save(T entity);
+		void Delete(int id);
 		List<T> GetList();
 	}
 }

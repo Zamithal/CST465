@@ -185,16 +185,22 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Code\DataObjects\BlogPost.cs" />
+    <Compile Include="Code\DataObjects\GameItem.cs" />
+    <Compile Include="Code\DataObjects\GameItemCategory.cs" />
     <Compile Include="Code\Extension Methods\BlogRepositoryExtensions.cs" />
     <Compile Include="Code\Interfaces\IDataEntity.cs" />
     <Compile Include="Code\Interfaces\IDataEntityRepository.cs" />
     <Compile Include="Code\Repositories\BlogDBRepository.cs" />
     <Compile Include="Code\Repositories\BlogFileRepository.cs" />
+    <Compile Include="Code\Repositories\GameItemCategoryDBRepository.cs" />
+    <Compile Include="Code\Repositories\GameItemDBRepository.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\GameItemCategoryController.cs" />
+    <Compile Include="Controllers\GameItemController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MidtermController.cs" />
     <Compile Include="Global.asax.cs">
@@ -206,6 +212,8 @@
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\Account\ResetPasswordViewModel.cs" />
     <Compile Include="Models\Blog\BlogPostModel.cs" />
+    <Compile Include="Models\GameItem\GameItemModel.cs" />
+    <Compile Include="Models\GameItem\GameItemCategoryModel.cs" />
     <Compile Include="Models\Identity\ApplicationDBContext.cs" />
     <Compile Include="Models\Identity\ApplicationRole.cs" />
     <Compile Include="Models\Identity\ApplicationUser.cs" />
@@ -259,6 +267,10 @@
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\GameItemCategory\EditorTemplates\GameItemCategoryModel.cshtml" />
+    <Content Include="Views\GameItemCategory\DisplayTemplates\GameItemCategory.cshtml" />
+    <Content Include="Views\GameItem\EditorTemplates\GameItemModel.cshtml" />
+    <Content Include="Views\GameItem\DisplayTemplates\GameItem.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -60,6 +60,8 @@ namespace HalvaWebApplication.Controllers
 
 				m_repository.Save(post);
 			}
+			else
+				return View(model);
 
 			return RedirectToAction("Index");
 		}
@@ -69,12 +71,10 @@ namespace HalvaWebApplication.Controllers
 		{
 			BlogPost blog = m_repository.Get(id);
 			Models.BlogPostModel model = new Models.BlogPostModel();
-			{
-				model.ID = blog.ID;
-				model.Author = blog.Author;
-				model.Title = blog.Title;
-				model.Content = blog.Content;
-			}
+			model.ID = blog.ID;
+			model.Author = blog.Author;
+			model.Title = blog.Title;
+			model.Content = blog.Content;
 
 			return View(model);
 		}

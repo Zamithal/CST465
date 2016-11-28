@@ -95,5 +95,10 @@ namespace HalvaWebApplication.Code.Repositories
 				stream.Close();
 			}
 		}
+
+		public void Delete(int id)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

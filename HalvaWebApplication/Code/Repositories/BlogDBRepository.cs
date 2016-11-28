@@ -13,7 +13,6 @@ namespace HalvaWebApplication.Code.Repositories
 {
 	public class BlogDBRepository : IDataEntityRepository<BlogPost>
 	{
-
 		public BlogPost Get(int id)
 		{
 			BlogPost post = new BlogPost();
@@ -98,6 +97,11 @@ namespace HalvaWebApplication.Code.Repositories
 					command.ExecuteNonQuery();
 				}
 			}
+		}
+
+		public void Delete(int id)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

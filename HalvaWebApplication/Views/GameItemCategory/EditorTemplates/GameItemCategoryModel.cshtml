@@ -1,0 +1,18 @@
+﻿@model HalvaWebApplication.Models.GameItem.GameItemCategoryModel
+@using HalvaWebApplication.Code.Repositories
+@using HalvaWebApplication.Code.DataObjects
+@{ 
+    // TODO: Ask if there is a better way to do this.
+    GameItemCategoryDBRepository repo = new GameItemCategoryDBRepository();
+
+    List<SelectListItem> dropDown = new List<SelectListItem>();
+
+    foreach (GameItemCategory choice in ViewBag["validCategories"])
+    {
+        dropDown.Add(new SelectListItem { Text = choice.CategoryName, Value = choice.ID.ToString() });
+    }
+
+    @Html.DropDownList("ID", dropDown);
+
+    @Html.ValidationMessage("ID");
+}
