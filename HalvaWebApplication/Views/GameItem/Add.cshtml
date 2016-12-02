@@ -1,5 +1,10 @@
 ﻿@model HalvaWebApplication.Models.GameItem.GameItemModel
 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 @using (Html.BeginForm())
 {
     @Html.EditorForModel()

@@ -1,12 +1,12 @@
 ﻿@model HalvaWebApplication.Models.GameItem.GameItemModel
 
-@Html.LabelFor(m => m.ItemName);
-@Html.TextBoxFor(m => m.ItemName);
+@Html.LabelFor(m => m.ItemName)
+@Html.TextBoxFor(m => m.ItemName)
 
-@Html.LabelFor(m => m.ItemCode);
-@Html.TextBoxFor(m => m.ItemCode);
+@Html.LabelFor(m => m.ItemCode)
+@Html.TextBoxFor(m => m.ItemCode)
 
-@Html.DropDownListFor(m => m.ItemCategoryID, Model.CategoryList);
+@Html.DropDownListFor(m => m.ItemCategoryID, Model.CategoryList)
 
-@Html.LabelFor(m => m.ItemDescription);
-@Html.TextAreaFor(m => m.ItemDescription);
+@Html.LabelFor(m => m.ItemDescription)
+@Html.TextAreaFor(m => m.ItemDescription)

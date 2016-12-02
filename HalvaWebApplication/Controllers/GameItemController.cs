@@ -30,6 +30,7 @@ namespace HalvaWebApplication.Controllers
 			{
 				GameItemModel newItem = new GameItemModel(item);
 				newItem.CategoryList = categories;
+				models.Add(newItem);
 			}
 
             return View(models);
@@ -66,6 +67,8 @@ namespace HalvaWebApplication.Controllers
 				item.ItemAttributeQuantity = Model.ItemAttributeQuantity;
 				item.ItemImage = item.ItemImage;
 				item.ItemPrice = item.ItemPrice;
+
+				m_repository.Save(item);
 			}
 			else
 				return View(Model);
@@ -86,7 +89,7 @@ namespace HalvaWebApplication.Controllers
 				model.ItemName = item.ItemName;
 				model.ItemCategoryID = item.ItemCategoryID;
 				model.ItemDescription = item.ItemDescription;
-				model.ItemAttributeID = 0;
+				model.ItemAttributeID = 1;
 				model.ItemAttributeQuantity = item.ItemAttributeQuantity;
 				model.ItemImage = item.ItemImage;
 				model.ItemPrice = item.ItemPrice;
@@ -120,7 +123,7 @@ namespace HalvaWebApplication.Controllers
 			return RedirectToAction("Index");
 		}
 
-		[HttpPost]
+
 		public ActionResult Delete(int ID)
 		{
 			m_repository.Delete(ID);

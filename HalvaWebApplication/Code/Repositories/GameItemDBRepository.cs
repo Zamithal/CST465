@@ -67,7 +67,7 @@ namespace HalvaWebApplication.Code.Repositories
 							item.ItemCategoryID = Int32.Parse(itemReader["ItemCategoryID"].ToString());
 							item.ItemDescription = itemReader["ItemDescription"].ToString();
 							item.ItemAttributeID = Int32.Parse(itemReader["ItemGivenAttributeID"].ToString());
-							item.ItemAttributeQuantity = Int32.Parse(itemReader["ItemGivenAttributeQuanitiy"].ToString());
+							item.ItemAttributeQuantity = Int32.Parse(itemReader["ItemGivenAttributeQuantity"].ToString());
 							item.ItemPrice = Int32.Parse(itemReader["ItemPrice"].ToString());
 
 							items.Add(item);
@@ -107,7 +107,7 @@ namespace HalvaWebApplication.Code.Repositories
 					command.Parameters.AddWithValue("@ItemCategoryID", item.ItemCategoryID);
 					command.Parameters.AddWithValue("@ItemDescription", item.ItemDescription);
 					command.Parameters.AddWithValue("@ItemGivenAttributeID", item.ItemAttributeID);
-					command.Parameters.AddWithValue("@ItemGiveAttributeQuantity", item.ItemAttributeQuantity);
+					command.Parameters.AddWithValue("@ItemGivenAttributeQuantity", item.ItemAttributeQuantity);
 					command.Parameters.AddWithValue("@ItemImage", item.ItemImage);
 					command.Parameters.AddWithValue("@ItemPrice", item.ItemPrice);
 					command.Connection = connection;

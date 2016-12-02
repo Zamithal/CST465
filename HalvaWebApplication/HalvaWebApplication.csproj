@@ -273,6 +273,7 @@
     <Content Include="Views\GameItem\DisplayTemplates\GameItemModel.cshtml" />
     <Content Include="Views\GameItemCategory\Index.cshtml" />
     <Content Include="Views\GameItem\Add.cshtml" />
+    <Content Include="Views\GameItem\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

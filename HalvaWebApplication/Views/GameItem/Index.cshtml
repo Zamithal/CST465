@@ -1,0 +1,13 @@
+﻿@model List<HalvaWebApplication.Models.GameItem.GameItemModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (HalvaWebApplication.Models.GameItem.GameItemModel item in Model)
+{
+    @Html.ActionLink(item.ItemName, "Display", item)
+    @Html.ActionLink("Delete", "Delete", item.ID)
+    <br />
+}
