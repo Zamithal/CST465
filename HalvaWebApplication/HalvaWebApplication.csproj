@@ -270,8 +270,9 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\GameItemCategory\DisplayTemplates\GameItemCategory.cshtml" />
     <Content Include="Views\GameItem\EditorTemplates\GameItemModel.cshtml" />
-    <Content Include="Views\GameItem\DisplayTemplates\GameItem.cshtml" />
+    <Content Include="Views\GameItem\DisplayTemplates\GameItemModel.cshtml" />
     <Content Include="Views\GameItemCategory\Index.cshtml" />
+    <Content Include="Views\GameItem\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,10 @@
+﻿@model HalvaWebApplication.Models.GameItem.GameItemModel
+
+@{
+    <h2>@Model.ItemName</h2>
+    <p>@Model.ItemCode</p>
+    <p>@Model.CategoryList[Model.ItemCategoryID]</p>
+    <p>@Model.ItemImage</p>
+    <p>@Model.ItemDescription</p>
+    <p>@Model.ItemPrice</p>
+}

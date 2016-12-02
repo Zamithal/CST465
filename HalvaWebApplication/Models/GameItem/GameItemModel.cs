@@ -10,10 +10,21 @@ namespace HalvaWebApplication.Models.GameItem
 {
 	public class GameItemModel
 	{
-		public GameItemModel(HalvaWebApplication.Code.DataObjects.GameItem)
+		public GameItemModel(HalvaWebApplication.Code.DataObjects.GameItem Item)
 		{
-
+			ID = Item.ID;
+			ItemCode = Item.ItemCode;
+			ItemName = Item.ItemName;
+			ItemCategoryID = Item.ItemCategoryID;
+			ItemDescription = Item.ItemDescription;
+			ItemAttributeID = Item.ItemAttributeID;
+			ItemAttributeQuantity = Item.ItemAttributeQuantity;
+			ItemImage = Item.ItemImage;
+			ItemPrice = Item.ItemPrice;
 		}
+
+		public GameItemModel()
+		{ }
 
 		public int ID { get; set; }
 		[DisplayName("Code")]
@@ -23,7 +34,7 @@ namespace HalvaWebApplication.Models.GameItem
 		public int ItemCategoryID { get; set; }
 		[DisplayName("Description")]
 		public string ItemDescription { get; set; }
-		public string ItemAttributeName { get; set; }
+		public int ItemAttributeID { get; set; }
 		public int ItemAttributeQuantity { get; set; }
 		public int ItemImage { get; set; }
 		[DisplayName("Price")]

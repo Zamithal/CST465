@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HalvaWebApplication.Code.Interfaces;
 using HalvaWebApplication.Code.DataObjects;
+using HalvaWebApplication.Models.GameItem;
 using HalvaWebApplication.Code.Repositories;
 
 namespace HalvaWebApplication.Controllers
@@ -21,26 +22,37 @@ namespace HalvaWebApplication.Controllers
         public ActionResult Index()
         {
 			List<GameItem> items = m_repository.GetList();
+			List<GameItemModel> models = new List<GameItemModel>();
 
-            return View(items);
+			List<SelectListItem> categories = constructCategoryList();
+
+			foreach(GameItem item in items)
+			{
+				GameItemModel newItem = new GameItemModel(item);
+				newItem.CategoryList = categories;
+			}
+
+            return View(models);
         }
 
 		public ActionResult Display(int ID)
 		{
-			GameItem item = m_repository.Get(ID);
+			GameItemModel model = new GameItemModel(m_repository.Get(ID));
+			model.CategoryList = constructCategoryList();
 
-			return View(item);
+			return View(model);
 		}
 
 		public ActionResult Add()
 		{
-			Models.GameItem.GameItemModel model = new Models.GameItem.GameItemModel();
+			GameItemModel model = new GameItemModel();
+			model.CategoryList = constructCategoryList();
 
 			return View(model);
 		}
 
 		[HttpPost]
-		public ActionResult Add(Models.GameItem.GameItemModel Model)
+		public ActionResult Add(GameItemModel Model)
 		{
 			if (ModelState.IsValid)
 			{
@@ -48,7 +60,7 @@ namespace HalvaWebApplication.Controllers
 				item.ID = Model.ID;
 				item.ItemCode = Model.ItemCode;
 				item.ItemName = Model.ItemName;
-				item.ItemCategoryID = Model.ItemCategory.ID;
+				item.ItemCategoryID = Model.ItemCategoryID;
 				item.ItemDescription = Model.ItemDescription;
 				item.ItemAttributeID = 1;
 				item.ItemAttributeQuantity = Model.ItemAttributeQuantity;
@@ -65,7 +77,7 @@ namespace HalvaWebApplication.Controllers
 		{
 			GameItem item = m_repository.Get(ID);
 
-			Models.GameItem.GameItemModel model = new Models.GameItem.GameItemModel();
+			GameItemModel model = new GameItemModel();
 
 			if (item != null)
 			{
@@ -74,15 +86,11 @@ namespace HalvaWebApplication.Controllers
 				model.ItemName = item.ItemName;
 				model.ItemCategoryID = item.ItemCategoryID;
 				model.ItemDescription = item.ItemDescription;
-				model.ItemAttributeName = "Weight";
+				model.ItemAttributeID = 0;
 				model.ItemAttributeQuantity = item.ItemAttributeQuantity;
 				model.ItemImage = item.ItemImage;
 				model.ItemPrice = item.ItemPrice;
-
-				List<SelectListItem> categoryList = new List<SelectListItem>();
-				m_categoryRepository.GetList().ForEach(listItem => categoryList.Add(new SelectListItem() { Text = listItem.CategoryName, Value = listItem.ID.ToString() }));
-
-				model.CategoryList = categoryList;
+				model.CategoryList = constructCategoryList();
 			}
 			else
 				return RedirectToAction("Index");
@@ -91,7 +99,7 @@ namespace HalvaWebApplication.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Edit(Models.GameItem.GameItemModel Model)
+		public ActionResult Edit(GameItemModel Model)
 		{
 			if (ModelState.IsValid)
 			{
@@ -99,7 +107,7 @@ namespace HalvaWebApplication.Controllers
 				item.ID = Model.ID;
 				item.ItemCode = Model.ItemCode;
 				item.ItemName = Model.ItemName;
-				item.ItemCategoryID = Model.ItemCategory.ID;
+				item.ItemCategoryID = Model.ItemCategoryID;
 				item.ItemDescription = Model.ItemDescription;
 				item.ItemAttributeID = 1;
 				item.ItemAttributeQuantity = Model.ItemAttributeQuantity;
@@ -119,6 +127,15 @@ namespace HalvaWebApplication.Controllers
 
 			return RedirectToAction("Index");
 		}
+
+		private List<SelectListItem> constructCategoryList()
+		{
+			List<SelectListItem> categoryList = new List<SelectListItem>();
+			m_categoryRepository.GetList().ForEach(listItem => categoryList.Add(new SelectListItem() { Text = listItem.CategoryName, Value = listItem.ID.ToString() }));
+
+			return categoryList;
+		}
+
 
 		private IDataEntityRepository<GameItem> m_repository;
 		private IDataEntityRepository<GameItemCategory> m_categoryRepository;
