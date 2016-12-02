@@ -15,19 +15,6 @@ namespace HalvaWebApplication.Code.Extension_Methods
 			List<BlogPost> contains = new List<BlogPost>();
 			contains = Blogs.GetList().Where(post => post.Title.Contains(SearchString) || post.Content.Contains(SearchString)).ToList();
 
-			foreach (BlogPost blog in Blogs.GetList())
-			{
-				if (blog.Title.Contains(SearchString))
-				{
-					contains.Add(blog);
-				}
-				else if (blog.Content.Contains(SearchString))
-				{
-					contains.Add(blog);
-				}
-
-			}
-
 			return contains;
 		}
 	}

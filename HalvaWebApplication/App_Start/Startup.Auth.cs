@@ -3,12 +3,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using CST465_MVC.Models;
+using HalvaWebApplication.Models;
 
 using Owin;
 
 
-namespace CST465_MVC
+namespace HalvaWebApplication
 {
     public partial class Startup
     {

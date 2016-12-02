@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading;
 
-namespace CST465_MVC.Models
+namespace HalvaWebApplication.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

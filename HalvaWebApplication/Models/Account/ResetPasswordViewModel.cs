@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace CST465_MVC.Models
+namespace HalvaWebApplication.Models
 {
     public class ResetPasswordViewModel
     {

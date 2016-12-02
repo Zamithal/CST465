@@ -10,11 +10,11 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using CST465_MVC.Models;
+using HalvaWebApplication.Models;
 using System.Net.Mail;
 using System.Net.Mime;
 
-namespace CST465_MVC
+namespace HalvaWebApplication
 {
     public class EmailService : IIdentityMessageService
     {

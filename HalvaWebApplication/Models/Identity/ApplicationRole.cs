@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace CST465_MVC.Models
+namespace HalvaWebApplication.Models
 {
     public class ApplicationRole : IdentityRole
     {

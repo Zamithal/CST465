@@ -72,12 +72,17 @@ namespace HalvaWebApplication.Controllers
 				model.ID = item.ID;
 				model.ItemCode = item.ItemCode;
 				model.ItemName = item.ItemName;
-				model.ItemCategory = m_categoryRepository.Get(item.ItemCategoryID);
+				model.ItemCategoryID = item.ItemCategoryID;
 				model.ItemDescription = item.ItemDescription;
-				model.ItemAttributeName = "Weapon";
+				model.ItemAttributeName = "Weight";
 				model.ItemAttributeQuantity = item.ItemAttributeQuantity;
 				model.ItemImage = item.ItemImage;
 				model.ItemPrice = item.ItemPrice;
+
+				List<SelectListItem> categoryList = new List<SelectListItem>();
+				m_categoryRepository.GetList().ForEach(listItem => categoryList.Add(new SelectListItem() { Text = listItem.CategoryName, Value = listItem.ID.ToString() }));
+
+				model.CategoryList = categoryList;
 			}
 			else
 				return RedirectToAction("Index");

@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using CST465_MVC.Models;
+using HalvaWebApplication.Models;
 
-namespace CST465_MVC.Controllers
+namespace HalvaWebApplication.Controllers
 {
     [Authorize]
     public class AccountController : Controller

@@ -4,6 +4,11 @@ using Unity.Mvc5;
 
 using HalvaWebApplication.Code.Interfaces;
 using HalvaWebApplication.Code.Repositories;
+using HalvaWebApplication.Models;
+using System.Data.Entity;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using HalvaWebApplication.Controllers;
 
 namespace HalvaWebApplication
 {
@@ -18,7 +23,8 @@ namespace HalvaWebApplication
             
             // e.g. container.RegisterType<ITestService, TestService>();
 			container.RegisterType<IDataEntityRepository<HalvaWebApplication.Code.DataObjects.BlogPost>, BlogFileRepository>();
-
+			container.RegisterType<IDataEntityRepository<HalvaWebApplication.Code.DataObjects.GameItemCategory>, GameItemCategoryDBRepository>();
+			container.RegisterType<IDataEntityRepository<HalvaWebApplication.Code.DataObjects.GameItem>, GameItemDBRepository>();
 			//IDENTITY
 			container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager());
 			container.RegisterType<UserManager<ApplicationUser>>(new HierarchicalLifetimeManager());

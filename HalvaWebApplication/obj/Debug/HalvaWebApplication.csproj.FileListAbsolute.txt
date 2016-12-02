@@ -100,3 +100,24 @@ D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplicatio
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.dll
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.pdb
 D:\Documents\AAA School Work AAA\AAA Current Term AAA\CST 465\HalvaWebApplication\obj\Debug\HalvaWebApplication.csprojResolveAssemblyReference.cache
+Z:\documents\CST465\HalvaWebApplication\bin\EntityFramework.dll
+Z:\documents\CST465\HalvaWebApplication\bin\EntityFramework.SqlServer.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Security.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+Z:\documents\CST465\HalvaWebApplication\bin\Owin.dll
+Z:\documents\CST465\HalvaWebApplication\bin\EntityFramework.xml
+Z:\documents\CST465\HalvaWebApplication\bin\EntityFramework.SqlServer.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Security.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+Z:\documents\CST465\HalvaWebApplication\bin\Microsoft.Owin.Security.OAuth.xml
