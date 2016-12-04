@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using HalvaWebApplication.Models;
+using System.Collections.Generic;
 
 namespace HalvaWebApplication.Controllers
 {
@@ -17,17 +18,18 @@ namespace HalvaWebApplication.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        
+		private ApplicationRoleManager _roleManager;
 
         public AccountController()
         {
             
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, ApplicationRoleManager roleManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+			RoleManager = roleManager;
         }
 
         public ApplicationSignInManager SignInManager
@@ -53,6 +55,19 @@ namespace HalvaWebApplication.Controllers
                 _userManager = value;
             }
         }
+
+		public ApplicationRoleManager RoleManager
+		{
+			get
+			{
+				return _roleManager ?? HttpContext.GetOwinContext().Get<ApplicationRoleManager>();
+			}
+			private set
+			{
+				_roleManager = value;
+			}
+		}
+
 
         //
         // GET: /Account/Login
@@ -187,7 +202,7 @@ namespace HalvaWebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, BirthDate = model.BirthDate };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, BirthDate = model.BirthDate, FirstName = model.FirstName, LastName = model.LastName, Age = model.Age };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -420,46 +435,45 @@ namespace HalvaWebApplication.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View(model);
         }
-        //[HttpPost]
-        //[Authorize]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult JoinRole(string RoleName)
-        //{
+		[HttpPost]
+		[Authorize]
+		[ValidateAntiForgeryToken]
+		public ActionResult JoinRole(string RoleName)
+		{
 
-        //    UserManager.AddToRole(User.Identity.GetUserId(), RoleName);
+			UserManager.AddToRole(User.Identity.GetUserId(), RoleName);
 
-        //    return RedirectToAction("Roles");
+			return RedirectToAction("Roles");
+		}
 
+		[HttpGet]
+		[Authorize]
+		public ActionResult Roles()
+		{
+			List<string> roleNames = RoleManager.Roles.Select(role => role.Name).ToList();
+			return View(roleNames);
+		}
+		[HttpPost]
+		[Authorize]
+		[ValidateAntiForgeryToken]
+		public ActionResult Roles(string RoleName)
+		{
+			var role = new ApplicationRole();
+			role.Id = Guid.NewGuid().ToString();
+			role.Name = RoleName;
+			RoleManager.Create(role);
 
-        //}
-        //[HttpGet]
-        //[Authorize]
-        //public ActionResult Roles()
-        //{
-        //    List<string> roleNames = RoleManager.Roles.Select(role => role.Name).ToList();
-        //    return View(roleNames);
-        //}
-        //[HttpPost]
-        //[Authorize]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Roles(string RoleName)
-        //{
-        //    var role = new ApplicationRole();
-        //    role.Id = Guid.NewGuid().ToString();
-        //    role.Name = RoleName;
-        //    RoleManager.Create(role);
+			return RedirectToAction("Roles");
 
-        //    return RedirectToAction("Roles");
+		}
 
-        //}
-        //
-        //POST: /Account/LogOff
-        [HttpPost]
+		//POST: /Account/LogOff
+		[HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Intro");
+            return RedirectToAction("Index", "Home");
         }
 
         //
@@ -516,7 +530,7 @@ namespace HalvaWebApplication.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Intro");
+            return RedirectToAction("Index", "Home");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

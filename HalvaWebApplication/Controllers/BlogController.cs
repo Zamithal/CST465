@@ -40,6 +40,7 @@ namespace HalvaWebApplication.Controllers
 				return View();
 		}
 
+		[Authorize]
 		public ActionResult Add()
 		{
 			Models.BlogPostModel blog = new Models.BlogPostModel();
@@ -66,7 +67,7 @@ namespace HalvaWebApplication.Controllers
 			return RedirectToAction("Index");
 		}
 
-
+		[Authorize]
 		public ActionResult Edit(int id)
 		{
 			BlogPost blog = m_repository.Get(id);

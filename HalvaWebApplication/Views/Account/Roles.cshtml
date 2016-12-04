@@ -1,0 +1,14 @@
+﻿@model List<string>
+
+@foreach (string role in Model)
+{
+    role.ToString();
+    <br />
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.Label("RoleName", "Role Name:")
+    @Html.TextBox("RoleName");
+    <button type="submit">Submit</button>
+}

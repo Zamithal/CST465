@@ -27,6 +27,17 @@ namespace HalvaWebApplication.Models
         [DataType(DataType.DateTime)]
         public DateTime BirthDate { get; set; }
 
+		[Required]
+		[Display(Name = "First Name")]
+		public string FirstName { get; set; }
+
+		[Required]
+		[Display(Name = "Last Name")]
+		public string LastName { get; set; }
+
+		[Required]
+		[Display(Name = "Age")]
+		public int Age { get; set; }
 
     }
 }
