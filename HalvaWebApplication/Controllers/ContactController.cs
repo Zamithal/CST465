@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HalvaWebApplication.Models.Contact;
 
 namespace HalvaWebApplication.Controllers
 {
@@ -11,7 +12,18 @@ namespace HalvaWebApplication.Controllers
         // GET: Contact
         public ActionResult Index()
         {
-            return View();
+			ContactUsModel model = new ContactUsModel();
+            return View(model);
         }
+		[HttpPost]
+		public ActionResult Index(ContactUsModel Model)
+		{
+			if (ModelState.IsValid)
+			{
+				return View("ThankYou");
+			}
+			else
+				return View(Model);
+		}
     }
 }

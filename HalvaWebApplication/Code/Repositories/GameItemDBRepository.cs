@@ -34,7 +34,7 @@ namespace HalvaWebApplication.Code.Repositories
 							item.ItemCategoryID = Int32.Parse(reader["ItemCategoryID"].ToString());
 							item.ItemDescription = reader["ItemDescription"].ToString();
 							item.ItemAttributeID = Int32.Parse(reader["ItemGivenAttributeID"].ToString());
-							item.ItemAttributeQuantity = Int32.Parse(reader["ItemGivenAttributeQuanitiy"].ToString());
+							item.ItemAttributeQuantity = Int32.Parse(reader["ItemGivenAttributeQuantity"].ToString());
 							item.ItemPrice = Int32.Parse(reader["ItemPrice"].ToString());
 						}
 					}

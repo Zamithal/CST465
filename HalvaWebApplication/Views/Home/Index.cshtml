@@ -1,16 +1,22 @@
 ﻿
+@using HalvaWebApplication.Models.GameItem;
+@using HalvaWebApplication.Code.DataObjects;
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Halva";
-    ViewBag.PageH1 = "Home";
 }
 
-Home page test.
+<h2>Recent Posts</h2>
+@Html.Partial("_BlogPostLinkList", (List<BlogPost>)ViewBag.recentPosts)
+<br />
+<h2>Game Items</h2>
+@Html.Partial("_GameItemModelLinkList", (List<GameItemModel>)ViewBag.gameItems)
 
 
 @section navigation
 {
-<a href="example">Example</a>
+@Html.Partial("_NavigationLinks")
 }
 
 @section footer

@@ -22,7 +22,7 @@ namespace HalvaWebApplication
             // it is NOT necessary to register your controllers
             
             // e.g. container.RegisterType<ITestService, TestService>();
-			container.RegisterType<IDataEntityRepository<HalvaWebApplication.Code.DataObjects.BlogPost>, BlogFileRepository>();
+			container.RegisterType<IDataEntityRepository<HalvaWebApplication.Code.DataObjects.BlogPost>, BlogDBRepository>();
 			container.RegisterType<IDataEntityRepository<HalvaWebApplication.Code.DataObjects.GameItemCategory>, GameItemCategoryDBRepository>();
 			container.RegisterType<IDataEntityRepository<HalvaWebApplication.Code.DataObjects.GameItem>, GameItemDBRepository>();
 			//IDENTITY

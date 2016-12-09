@@ -1,9 +1,15 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "About us";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.PageH1 = "About us";
 }
 
-<h2>Index</h2>
+<h2>About us</h2>
+<p>Halva is a Virtual reality game built on the UnrealEngine 4. The game is a prototype built for the senior project of Skyler Swenson while attending OIT</p>
+<p>The game utilizes the HTC Vive and motion controllers to allow the user to explore the game world.</p>
+<p>This is some more text that I will get back to at some point.</p>
 
+@section navigation
+{
+    @Html.Partial("_NavigationLinks")
+}

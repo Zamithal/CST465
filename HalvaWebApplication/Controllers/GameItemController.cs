@@ -36,6 +36,40 @@ namespace HalvaWebApplication.Controllers
             return View(models);
         }
 
+		[HttpPost]
+		public ActionResult Index(string NameFilter, string CategoryFilter)
+		{
+			//TODO: Make this filter at the SQL server and not here.
+			List<GameItem> items = m_repository.GetList();
+
+			List<GameItem> filteredItems = null;
+
+			int categoryFilterID = Int32.Parse(CategoryFilter);
+
+			if (categoryFilterID != -1)
+			{
+				filteredItems = items.Where(m => m.ItemCategoryID == categoryFilterID).ToList();
+			}
+			else
+			{
+				filteredItems = items;
+			}
+
+			filteredItems = filteredItems.Where(m => m.ItemName.Contains(NameFilter)).ToList();
+
+			List<GameItemModel> modelList = new List<GameItemModel>();
+			List<SelectListItem> categories = constructCategoryList();
+
+			foreach (GameItem item in filteredItems)
+			{
+				GameItemModel newItem = new GameItemModel(item);
+				newItem.CategoryList = categories;
+				modelList.Add(newItem);
+			}
+
+			return View(modelList);
+		}
+
 		public ActionResult Display(int ID)
 		{
 			GameItemModel model = new GameItemModel(m_repository.Get(ID));

@@ -1,31 +1,50 @@
-﻿img
+﻿#uxBanner
 {
-	width:100%;
-	height: 100%;
-}
-
-#uxBanner
-{
-	width: 66%;
+	width: 70%;
 	height: 5%;
 	margin: auto;
 	padding: .25rem;
 	color: #493829;
 	background-color: #B99C6B;
-	font-family: Papyrus;
+	font-family: Papyrus, Arial;
 	position:relative;
+	border-radius: 5px;
 }
+
+/*TODO: Bottom align this.*/
+#uxBannerText 
+{
+}
+
 #uxLogo
 {
 	float:left;
+	clear:left;
 	margin: 10px 10px 10px 10px;
 	width: 100px;
-	height: 100px;
+	height: 100px;	
 }
 
-#uxBannerText
+#uxLogo img
 {
-	float:left;
+	width:100%;
+	height: 100%;
+}
+
+#uxSlogan
+{
+	width:auto;
+	display:inline-block;
+}
+
+#uxLogin
+{
+	width:auto;
+	margin: 0 .25rem 0 .25rem;
+	display:inline-block;
+	text-align:right;
+	float:right;
+	clear:right;
 }
 
 #uxSiteName
@@ -33,3 +52,27 @@
 	font-size: 2.5rem;
 }
 
+#uxNavigation
+{
+	width: 70%;
+	height: auto;
+	margin: .5rem auto .5rem auto;
+	padding: .25rem;
+	background-color: #B99C6B;
+	font-family: Papyrus, Arial;
+	position:relative;
+	border-radius: 5px;
+
+}
+
+#uxMainBody
+{
+	width: 70%;
+	height: auto;
+	margin: auto;
+	padding: .25rem;
+	background-color: #B99C6B;
+	color: #493829;
+	position:relative;
+	border-radius: 5px;
+}

@@ -185,6 +185,7 @@
     <Content Include="CSS\Layout2.css" />
     <Content Include="Global.asax" />
     <Content Include="PageStyles.css" />
+    <Content Include="Resources\MountainVista.svg" />
     <Content Include="Resources\WheatSheaf.svg" />
     <Content Include="SQLScripts\DropIdentity.sql" />
     <Content Include="Web.config">
@@ -225,6 +226,7 @@
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\Account\ResetPasswordViewModel.cs" />
     <Compile Include="Models\Blog\BlogPostModel.cs" />
+    <Compile Include="Models\Contact\ContactUsModel.cs" />
     <Compile Include="Models\GameItem\GameItemModel.cs" />
     <Compile Include="Models\GameItem\GameItemCategoryModel.cs" />
     <Compile Include="Models\Identity\ApplicationDBContext.cs" />
@@ -288,6 +290,9 @@
     <Content Include="Views\GameItem\Add.cshtml" />
     <Content Include="Views\GameItem\Index.cshtml" />
     <Content Include="Views\Account\Roles.cshtml" />
+    <Content Include="Views\Shared\_GameItemModelLinkList.cshtml" />
+    <Content Include="Views\Contact\ThankYou.cshtml" />
+    <Content Include="Views\Shared\_NavigationLinks.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

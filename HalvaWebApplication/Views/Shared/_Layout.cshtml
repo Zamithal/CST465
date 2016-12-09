@@ -40,9 +40,13 @@
 			<div style="clear:both"></div>
 		</div>
 		<header>
-			@RenderSection("navigation", false)
+            <div id="uxNavigation">
+                @RenderSection("navigation", false)
+            </div>
 		</header>
-		@RenderBody()
+        <div id="uxMainBody">
+		    @RenderBody()
+        </div>
 		@RenderSection("footer", false)
 	</div>
 

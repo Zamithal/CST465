@@ -1,0 +1,18 @@
+﻿@using HalvaWebApplication.Models.GameItem;
+@model IEnumerable<GameItemModel>
+
+@foreach (GameItemModel item in Model)
+{
+    <div class="uxGameItemSumary">
+
+        @Html.ActionLink(item.ItemName, "Display", "GameItem", item, null)
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("Edit", "Edit", "GameItem", item, null)
+             
+            @Html.ActionLink("Delete", "Delete", "GameItem", item, null)
+        }
+
+    </div>
+}

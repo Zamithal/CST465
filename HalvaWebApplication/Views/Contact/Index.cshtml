@@ -1,9 +1,42 @@
-﻿
+﻿@model HalvaWebApplication.Models.Contact.ContactUsModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.PageH1 = "Contact Us";
 }
 
-<h2>Index</h2>
+<h2>Contact Us</h2>
+<h3>Send us a letter</h3>
+<p>Campus dr, Klamath Falls, Oregon, 97601</p>
+<h3>Give us a ring</h3>
+<p>1(234)567-8910</p>
+<h3>Shoot us an email</h3>
+@using (Html.BeginForm())
+{
+    <div id="uxContactUsForum">
+        
+        @Html.ValidationSummary()
 
+        @Html.LabelFor(m => m.Name)
+        <br />
+        @Html.TextBoxFor(m => m.Name)
+        <br />
+        @Html.LabelFor(m => m.PhoneNumber)
+        <br />
+        @Html.TextBoxFor(m => m.PhoneNumber)
+        <br />
+        @Html.LabelFor(m => m.Email)
+        <br />
+        @Html.TextBoxFor(m => m.Email)
+        <br />
+        @Html.LabelFor(m => m.Reason)
+        <br />
+        @Html.TextAreaFor(m => m.Reason)
+        <br />
+        <button type="submit" value="Submit">Submit</button>
+    </div>
+}
+
+@section navigation
+{
+    @Html.Partial("_NavigationLinks")
+}
